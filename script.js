@@ -217,6 +217,12 @@
     initAOS();
     lockGalleryVideo();
     onScroll();
+    // Safety: never leave sections invisible if observer misses them
+    setTimeout(function () {
+      document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(function (el) {
+        el.classList.add('aos-animate');
+      });
+    }, 2500);
   }
 
   if (document.readyState === 'loading') {
