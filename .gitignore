@@ -1,0 +1,11 @@
+# Temp / tooling
+images/_tmp/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.log
+.vscode/
+.idea/

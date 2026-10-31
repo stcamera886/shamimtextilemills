@@ -3,21 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shamim Textile Mills PVT LTD | Dyeing & Finishing Specialists</title>
-  <meta name="description" content="Shamim Textile Mills PVT LTD – Premier textile dyeing and finishing facility in Punjab, Pakistan. Stenters, Jiggers, Rotary Printing, Continuous Dyeing and more." />
+  <title>Shamim Textile Mills PVT LTD | Dyeing &amp; Finishing Textile Unit</title>
+  <meta name="description" content="Shamim Textile Mills PVT LTD — dyeing and finishing textile unit since 1995. Piece dyeing, batch and continuous dyeing, pretreatment, pigment printing, stentering, sanforizing and finished fabric for garment and home textile customers." />
+  <meta name="theme-color" content="#0B2A4A" />
+  <meta property="og:title" content="Shamim Textile Mills PVT LTD | Dyeing &amp; Finishing" />
+  <meta property="og:description" content="Dyeing and finishing textile unit since 1995 — converting greige woven fabric into coloured, processed, finished cloth for garment manufacturing, home textiles and fabric trading." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="tel:+923008449378"><i class="fa-solid fa-phone"></i> +92 300 8449378</a>
+        <a href="mailto:info@shamimtextilemills.com"><i class="fa-solid fa-envelope"></i> info@shamimtextilemills.com</a>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fa-solid fa-location-dot"></i> 4km Manga-Raiwind Road, Punjab</span>
+        <a href="https://wa.me/923315444435?text=Hello%2C%20I%20am%20interested%20in%20your%20dyeing%20and%20finishing%20services." class="topbar-wa" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#home" class="logo">
-        <img src="logo.png" alt="Shamim Textile Mills Logo" class="logo-img" />
+        <img src="logo.png" alt="Shamim Textile Mills" class="logo-img" />
         <div class="logo-text">
           <span class="logo-main">Shamim Textile</span>
           <span class="logo-sub">Mills PVT LTD</span>
@@ -26,12 +48,14 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#facility">Facility</a></li>
+        <li><a href="#capabilities">Process</a></li>
         <li><a href="#why-us">Why Us</a></li>
-        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -39,67 +63,51 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-particles" id="particles"></div>
+    <div class="hero-media" aria-hidden="true">
+      <img src="images/hero-mill.jpg" alt="Continuous dyeing and finishing line at Shamim Textile Mills" class="hero-img" width="1920" height="1080" />
+      <div class="hero-overlay"></div>
+    </div>
     <div class="container hero-content">
-      <div class="hero-badge">Trusted Textile Partner Since Decades</div>
-      <h1 class="hero-title">
-        Precision <span class="accent">Dyeing</span> &<br/>Advanced <span class="accent">Finishing</span>
-      </h1>
+      <p class="hero-brand">Shamim Textile Mills</p>
+      <h1 class="hero-title">Dyeing &amp; Finishing<br />Textile Unit</h1>
       <p class="hero-subtitle">
-        World-class textile processing for exporters and manufacturers.<br/>
-        Serving global supply chains from the heart of Punjab, Pakistan.
+        Since 1995 — converting greige woven fabric into coloured, processed, finished cloth for garment manufacturing, home textiles and fabric trading.
       </p>
       <div class="hero-actions">
         <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="#contact" class="btn btn-outline">Get a Quote</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">10+</span>
-          <span class="stat-label">Process Lines</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Quality Focused</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">Export</span>
-          <span class="stat-label">Ready Output</span>
-        </div>
+        <a href="https://wa.me/923315444435?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20fabric%20processing." class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Get a Quote
+        </a>
       </div>
     </div>
-    <a href="#about" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#about" class="scroll-down" aria-label="Scroll to about"><i class="fa-solid fa-chevron-down"></i></a>
   </section>
 
   <!-- ===== TICKER ===== -->
-  <div class="ticker-wrap">
+  <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker-track">
-      <span>Stenters</span><span class="dot">&#9679;</span>
-      <span>Pressurized Jiggers</span><span class="dot">&#9679;</span>
-      <span>Normal Jiggers</span><span class="dot">&#9679;</span>
-      <span>Sanforizing</span><span class="dot">&#9679;</span>
-      <span>Washing</span><span class="dot">&#9679;</span>
-      <span>Continuous Bleaching</span><span class="dot">&#9679;</span>
-      <span>Rotary Printing</span><span class="dot">&#9679;</span>
-      <span>Singeing</span><span class="dot">&#9679;</span>
+      <span>Piece Dyeing</span><span class="dot">&#9679;</span>
+      <span>Batch Dyeing</span><span class="dot">&#9679;</span>
       <span>Continuous Dyeing</span><span class="dot">&#9679;</span>
-      <span>Mercerizing</span><span class="dot">&#9679;</span>
-      <span>Dyeing &amp; Finishing Experts</span><span class="dot">&#9679;</span>
-      <!-- duplicate for seamless loop -->
-      <span>Stenters</span><span class="dot">&#9679;</span>
-      <span>Pressurized Jiggers</span><span class="dot">&#9679;</span>
-      <span>Normal Jiggers</span><span class="dot">&#9679;</span>
+      <span>Reactive Dyeing</span><span class="dot">&#9679;</span>
+      <span>Disperse Dyeing</span><span class="dot">&#9679;</span>
+      <span>Vat Dyeing</span><span class="dot">&#9679;</span>
+      <span>Stentering</span><span class="dot">&#9679;</span>
       <span>Sanforizing</span><span class="dot">&#9679;</span>
-      <span>Washing</span><span class="dot">&#9679;</span>
-      <span>Continuous Bleaching</span><span class="dot">&#9679;</span>
-      <span>Rotary Printing</span><span class="dot">&#9679;</span>
-      <span>Singeing</span><span class="dot">&#9679;</span>
+      <span>Softening</span><span class="dot">&#9679;</span>
+      <span>Bleaching &amp; Scouring</span><span class="dot">&#9679;</span>
+      <span>Pigment Printing</span><span class="dot">&#9679;</span>
+      <span>Piece Dyeing</span><span class="dot">&#9679;</span>
+      <span>Batch Dyeing</span><span class="dot">&#9679;</span>
       <span>Continuous Dyeing</span><span class="dot">&#9679;</span>
-      <span>Mercerizing</span><span class="dot">&#9679;</span>
-      <span>Dyeing &amp; Finishing Experts</span><span class="dot">&#9679;</span>
+      <span>Reactive Dyeing</span><span class="dot">&#9679;</span>
+      <span>Disperse Dyeing</span><span class="dot">&#9679;</span>
+      <span>Vat Dyeing</span><span class="dot">&#9679;</span>
+      <span>Stentering</span><span class="dot">&#9679;</span>
+      <span>Sanforizing</span><span class="dot">&#9679;</span>
+      <span>Softening</span><span class="dot">&#9679;</span>
+      <span>Bleaching &amp; Scouring</span><span class="dot">&#9679;</span>
+      <span>Pigment Printing</span><span class="dot">&#9679;</span>
     </div>
   </div>
 
@@ -108,41 +116,73 @@
     <div class="container about-grid">
       <div class="about-visual" data-aos="fade-right">
         <div class="about-img-wrap">
-          <img src="logo.png" alt="Shamim Textile Mills Logo" class="about-logo-img" />
-          <div class="about-badge-float">
-            <i class="fa-solid fa-certificate"></i>
-            <span>Export<br/>Ready</span>
+          <img src="images/factory-exterior.jpg" alt="Shamim Textile Mills plant exterior on Manga-Raiwind Road" class="about-photo" width="1920" height="515" />
+          <div class="about-logo-chip">
+            <img src="logo.png" alt="" />
           </div>
         </div>
       </div>
       <div class="about-content" data-aos="fade-left">
         <p class="section-eyebrow">About Us</p>
-        <h2 class="section-title">Pakistan's Trusted Name in <span class="accent">Textile Processing</span></h2>
+        <h2 class="section-title">Dyeing &amp; finishing since 1995</h2>
         <p class="about-desc">
-          Shamim Textile Mills PVT LTD is a state-of-the-art dyeing and finishing facility strategically located at 4km, Manga-Raiwind Road, Punjab. We bring decades of expertise in processing woven fabrics for domestic and international markets.
+          Shamim Textile Mills PVT LTD was established in 1995 at 4km, Manga-Raiwind Road. For three decades we have operated as a dyeing and finishing textile unit — converting greige woven fabric into coloured, processed, finished cloth for garment factories, home textile makers, exporters and fabric traders.
         </p>
         <p class="about-desc">
-          Our comprehensive range of finishing processes allows us to cater to fabric exporters, garment manufacturers, and trading houses who demand precision, consistency, and speed. From grey fabric to finished roll — we handle it all.
+          Our work covers washing and pretreatment, fabric dyeing, pigment and rotary printing, mechanical finishing, shrinkage control, and final fabric preparation — cotton, PC (poly-cotton) and woven fabrics under one roof.
         </p>
         <div class="about-highlights">
-          <div class="highlight-item">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Bulk Processing Capacity</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Export-Grade Quality Standards</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Wide Fabric Type Compatibility</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Experienced Technical Team</span>
-          </div>
+          <div class="highlight-item"><i class="fa-solid fa-circle-check"></i><span>Operating since 1995</span></div>
+          <div class="highlight-item"><i class="fa-solid fa-circle-check"></i><span>Piece dyeing of woven fabric</span></div>
+          <div class="highlight-item"><i class="fa-solid fa-circle-check"></i><span>Batch &amp; continuous dyeing</span></div>
+          <div class="highlight-item"><i class="fa-solid fa-circle-check"></i><span>Finishing, printing &amp; dispatch</span></div>
         </div>
-        <a href="#contact" class="btn btn-primary mt-20">Reach Out to Us</a>
+        <a href="#contact" class="btn btn-primary mt-20">Talk to our team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <section class="trust-strip">
+    <div class="container trust-inner">
+      <div class="trust-item">
+        <span class="trust-num">1995</span>
+        <span class="trust-label">Established</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">30+</span>
+        <span class="trust-label">Years in dyeing &amp; finishing</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">Full</span>
+        <span class="trust-label">Grey-to-finish chain</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">Ready</span>
+        <span class="trust-label">Cloth for garments</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISION ===== -->
+  <section class="vision section-pad" id="vision">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Our Direction</p>
+        <h2 class="section-title">Vision &amp; mission</h2>
+        <p class="section-desc">Clear purpose behind every meter we process — the standard we hold since 1995.</p>
+      </div>
+      <div class="vision-grid" data-aos="fade-up">
+        <article class="vision-card">
+          <p class="vision-label">Vision</p>
+          <h3>To be a trusted dyeing and finishing partner for Pakistan's textile supply chain.</h3>
+          <p>We aim to deliver consistent shade, hand-feel and dimensional stability — so garment makers, home textile producers and exporters can rely on finished cloth that meets buyer requirements, order after order.</p>
+        </article>
+        <article class="vision-card">
+          <p class="vision-label">Mission</p>
+          <h3>Convert greige woven fabric into ready cloth with care, capacity and control.</h3>
+          <p>Through pretreatment, dyeing, printing, finishing and shrinkage control under one roof, we turn raw fabric into market-ready cloth — on time, with process discipline built since 1995.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -151,188 +191,226 @@
   <section class="services section-pad bg-light" id="services">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <p class="section-eyebrow">What We Do</p>
-        <h2 class="section-title">Our <span class="accent">Dyeing & Finishing</span> Services</h2>
-        <p class="section-desc">End-to-end textile processing solutions engineered for export-quality results.</p>
+        <p class="section-eyebrow">Our Services</p>
+        <h2 class="section-title">Dyeing &amp; finishing services</h2>
+        <p class="section-desc">Specialised services that colour, wash, finish and prepare woven fabric for garment, home textile and trading customers.</p>
       </div>
       <div class="services-grid">
 
-        <div class="service-card" data-aos="fade-up" data-delay="0">
-          <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
-          <h3>Stenters</h3>
-          <p>High-capacity stenter machines for heat setting, width fixation, drying, and finishing of all fabric types. Ensures dimensional stability for export-grade cloth.</p>
-          <ul class="service-features">
-            <li>Width setting & fixation</li>
-            <li>Heat setting for synthetics</li>
-            <li>Drying & chemical padding</li>
-          </ul>
-        </div>
-
-        <div class="service-card" data-aos="fade-up" data-delay="100">
-          <div class="service-icon"><i class="fa-solid fa-flask"></i></div>
-          <h3>Pressurized Jiggers</h3>
-          <p>High-temperature pressurized jigger machines for dyeing polyester and synthetic blends. Achieves deep, uniform shade penetration with superior fastness.</p>
-          <ul class="service-features">
-            <li>Polyester & synthetic dyeing</li>
-            <li>High-temp pressure processing</li>
-            <li>Consistent shade matching</li>
-          </ul>
-        </div>
-
-        <div class="service-card" data-aos="fade-up" data-delay="200">
+        <article class="service-card" data-aos="fade-up">
           <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
-          <h3>Normal Jiggers</h3>
-          <p>Versatile open-width jigger machines for reactive and vat dyeing of cellulosic fabrics. Ideal for small and medium batch dyeing with precise colour control.</p>
+          <h3>Fabric Dyeing</h3>
+          <p>Piece dyeing of woven fabric after weaving — cotton, PC and blends coloured to customer shade requirements.</p>
           <ul class="service-features">
-            <li>Cotton & cellulosic fabrics</li>
-            <li>Reactive & vat dyes</li>
-            <li>Batch dyeing flexibility</li>
+            <li>Piece dyeing (woven fabric)</li>
+            <li>Batch dyeing on jiggers</li>
+            <li>Continuous dyeing for volume</li>
+            <li>Reactive dyeing for cotton</li>
+            <li>Disperse dyeing for PC / polyester</li>
+            <li>Vat dyeing for deep, durable shades</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="service-card" data-aos="fade-up" data-delay="0">
-          <div class="service-icon"><i class="fa-solid fa-compress"></i></div>
-          <h3>Sanforizing</h3>
-          <p>Mechanical pre-shrinking process that guarantees dimensional stability. Essential for export fabrics to meet international shrinkage standards.</p>
-          <ul class="service-features">
-            <li>Residual shrinkage control</li>
-            <li>Soft hand-feel finishing</li>
-            <li>International standard compliance</li>
-          </ul>
-        </div>
-
-        <div class="service-card" data-aos="fade-up" data-delay="100">
+        <article class="service-card" data-aos="fade-up">
           <div class="service-icon"><i class="fa-solid fa-shower"></i></div>
-          <h3>Washing</h3>
-          <p>Industrial continuous washing ranges for thorough scouring, washing-off after dyeing, and removal of unfixed dyes and chemicals for clean, bright results.</p>
+          <h3>Washing &amp; Pretreatment</h3>
+          <p>Preparation of greige fabric so it is clean, absorbent and ready for dyeing or printing.</p>
           <ul class="service-features">
-            <li>Scouring & desizing</li>
-            <li>Post-dyeing wash-off</li>
-            <li>Soaping & neutralizing</li>
+            <li>Singeing &amp; desizing</li>
+            <li>Scouring &amp; bleaching</li>
+            <li>Fabric washing &amp; soaping</li>
+            <li>Neutralization</li>
+            <li>Optical brightening (as required)</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="service-card" data-aos="fade-up" data-delay="200">
-          <div class="service-icon"><i class="fa-solid fa-sun"></i></div>
-          <h3>Continuous Bleaching</h3>
-          <p>Open-width continuous bleaching range for preparing grey fabric to bright, clean white. Optimized for cotton and cotton-blend fabrics.</p>
-          <ul class="service-features">
-            <li>High whiteness index</li>
-            <li>Cotton & poly-cotton blends</li>
-            <li>Consistent quality across lots</li>
-          </ul>
-        </div>
-
-        <div class="service-card" data-aos="fade-up" data-delay="0">
+        <article class="service-card" data-aos="fade-up">
           <div class="service-icon"><i class="fa-solid fa-print"></i></div>
-          <h3>Rotary Printing</h3>
-          <p>Multi-colour rotary screen printing for vibrant, detailed designs on fabric. Suitable for high-volume production with fast repeat accuracy.</p>
+          <h3>Printing</h3>
+          <p>Print designs on woven fabric grounds for apparel and home textile applications.</p>
           <ul class="service-features">
-            <li>Up to 12-colour printing</li>
-            <li>Reactive & pigment inks</li>
-            <li>High-speed production runs</li>
+            <li>Pigment printing</li>
+            <li>Rotary screen printing</li>
+            <li>Multi-colour production runs</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="service-card" data-aos="fade-up" data-delay="100">
-          <div class="service-icon"><i class="fa-solid fa-fire"></i></div>
-          <h3>Singeing</h3>
-          <p>Gas singeing machines to remove protruding fibres and surface fuzz from fabric, resulting in a clean, smooth surface ideal for printing and finishing.</p>
+        <article class="service-card" data-aos="fade-up">
+          <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+          <h3>Fabric Finishing</h3>
+          <p>Mechanical and chemical finishing that sets width, hand-feel and appearance of the cloth.</p>
           <ul class="service-features">
-            <li>Fabric surface smoothing</li>
-            <li>Improved print definition</li>
-            <li>Double-side singeing</li>
+            <li>Stentering (width &amp; heat setting)</li>
+            <li>Dry cans / cylinder drying</li>
+            <li>Softening &amp; hand-feel finishes</li>
+            <li>Heat setting for synthetics / PC</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="service-card" data-aos="fade-up" data-delay="0">
-          <div class="service-icon"><i class="fa-solid fa-vial"></i></div>
-          <h3>Mercerizing</h3>
-          <p>Caustic soda treatment for cotton fabrics that enhances lustre, tensile strength, and dye absorption for richer, more vibrant results.</p>
+        <article class="service-card" data-aos="fade-up">
+          <div class="service-icon"><i class="fa-solid fa-compress"></i></div>
+          <h3>Shrinkage Control</h3>
+          <p>Dimensional stability so finished fabric meets buyer shrinkage standards before garment making.</p>
           <ul class="service-features">
-            <li>Increased fabric lustre</li>
-            <li>Improved dye uptake</li>
-            <li>Enhanced tensile strength</li>
+            <li>Sanforizing</li>
+            <li>Residual shrinkage control</li>
+            <li>Improved fabric stability</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="service-card" data-aos="fade-up" data-delay="100">
-          <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
-          <h3>Continuous Dyeing</h3>
-          <p>High-speed continuous pad-dry-cure dyeing ranges for large-volume production. Delivers uniform shade, excellent fastness, and efficiency for export orders.</p>
+        <article class="service-card" data-aos="fade-up">
+          <div class="service-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>Quality &amp; Dispatch Support</h3>
+          <p>Supporting steps that help customers approve shade and receive fabric ready for the next stage.</p>
           <ul class="service-features">
-            <li>Pad-dry-cure process</li>
-            <li>Large-volume production</li>
-            <li>Excellent wash fastness</li>
+            <li>Shade approval &amp; sampling</li>
+            <li>Fabric inspection</li>
+            <li>Batch preparation</li>
+            <li>Rolling &amp; packaging</li>
+            <li>Customized processing as required</li>
           </ul>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
 
+  <!-- ===== CUSTOMERS ===== -->
+  <section class="customers section-pad" id="customers">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Who We Serve</p>
+        <h2 class="section-title">Built for textile supply chains</h2>
+        <p class="section-desc">We process fabric for the businesses that move cloth from mill to market.</p>
+      </div>
+      <div class="customers-grid" data-aos="fade-up">
+        <div class="customer-item"><i class="fa-solid fa-scissors"></i><span>Garment manufacturing factories</span></div>
+        <div class="customer-item"><i class="fa-solid fa-industry"></i><span>Weaving mills</span></div>
+        <div class="customer-item"><i class="fa-solid fa-house"></i><span>Home textile manufacturers</span></div>
+        <div class="customer-item"><i class="fa-solid fa-globe"></i><span>Export-oriented textile companies</span></div>
+        <div class="customer-item"><i class="fa-solid fa-shirt"></i><span>Fashion &amp; apparel brands</span></div>
+        <div class="customer-item"><i class="fa-solid fa-truck"></i><span>Fabric wholesalers &amp; traders</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FACILITY / GALLERY ===== -->
+  <section class="facility section-pad" id="facility">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Our Facility</p>
+        <h2 class="section-title">Our mill</h2>
+        <p class="section-desc">
+          Production floors at our Manga-Raiwind Road plant — singeing, continuous bleaching, thermosol, pressure jigger, dry cans, stenter, sanforizing and rotary printing.
+        </p>
+      </div>
+      <div class="gallery-grid" data-aos="fade-up">
+        <figure class="gallery-item gallery-wide pos-machine">
+          <img src="images/gallery-6.jpg" alt="Singeing machine at Shamim Textile Mills" loading="lazy" width="720" height="1191" />
+          <figcaption>Singeing</figcaption>
+        </figure>
+        <figure class="gallery-item pos-machine">
+          <img src="images/gallery-bleaching.jpg" alt="Continuous bleaching plant with fabric in process at Shamim Textile Mills" loading="lazy" width="1199" height="1312" />
+          <figcaption>Continuous bleaching</figcaption>
+        </figure>
+        <figure class="gallery-item pos-machine">
+          <img src="images/gallery-thermosol.jpg" alt="Thermosol dyeing range at Shamim Textile Mills" loading="lazy" width="576" height="1024" />
+          <figcaption>Thermosol</figcaption>
+        </figure>
+        <figure class="gallery-item pos-machine">
+          <img src="images/gallery-jigger.jpg" alt="Pressure jigger dyeing machine" loading="lazy" width="853" height="1280" />
+          <figcaption>Pressure jigger</figcaption>
+        </figure>
+        <figure class="gallery-item pos-machine">
+          <img src="images/gallery-1.jpg" alt="Dry cans drying range" loading="lazy" width="853" height="1280" />
+          <figcaption>Dry cans</figcaption>
+        </figure>
+        <figure class="gallery-item pos-machine">
+          <img src="images/gallery-5.jpg" alt="Stenter finishing machine" loading="lazy" width="853" height="1280" />
+          <figcaption>Stenter</figcaption>
+        </figure>
+        <figure class="gallery-item pos-machine">
+          <img src="images/gallery-10.jpg" alt="Sanforizing machine for shrinkage control" loading="lazy" width="853" height="1280" />
+          <figcaption>Sanforizing</figcaption>
+        </figure>
+        <figure class="gallery-item pos-machine">
+          <img src="images/gallery-2.jpg" alt="Open-width fabric processing line" loading="lazy" width="853" height="1280" />
+          <figcaption>Open-width processing</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-wide gallery-video">
+          <video
+            id="printingVideo"
+            src="videos/printing.mp4"
+            muted
+            autoplay
+            playsinline
+            loop
+            preload="metadata"
+            disablePictureInPicture
+            controlslist="nodownload nofullscreen noremoteplayback"
+            aria-label="Rotary printing machine processing cloth">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Rotary printing</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CAPABILITIES / PROCESS FLOW ===== -->
-  <section class="capabilities section-pad" id="capabilities">
+  <section class="capabilities section-pad bg-light" id="capabilities">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <p class="section-eyebrow">Our Process</p>
-        <h2 class="section-title">From <span class="accent">Grey Fabric</span> to Finished Roll</h2>
-        <p class="section-desc">A seamless processing flow under one roof — reducing lead times for exporters.</p>
+        <h2 class="section-title">From greige fabric to finished cloth</h2>
+        <p class="section-desc">Colouring, washing, chemical treatment, mechanical finishing and final preparation under one roof.</p>
       </div>
       <div class="process-flow">
         <div class="process-step" data-aos="fade-up">
           <div class="step-num">01</div>
           <div class="step-content">
-            <h4>Singeing & Desizing</h4>
-            <p>Surface fuzz removal and starch removal from grey fabric.</p>
+            <h4>Washing &amp; Pretreatment</h4>
+            <p>Singeing, desizing, scouring, bleaching and washing.</p>
           </div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="process-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
         <div class="process-step" data-aos="fade-up">
           <div class="step-num">02</div>
           <div class="step-content">
-            <h4>Continuous Bleaching</h4>
-            <p>Whitening and preparing fabric for dyeing or printing.</p>
+            <h4>Fabric Dyeing</h4>
+            <p>Reactive, vat or disperse dyeing — batch or continuous.</p>
           </div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="process-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
         <div class="process-step" data-aos="fade-up">
           <div class="step-num">03</div>
           <div class="step-content">
-            <h4>Mercerizing</h4>
-            <p>Caustic soda treatment to increase lustre, strength, and dye uptake of cotton fabric.</p>
+            <h4>Printing</h4>
+            <p>Pigment or rotary printing when designs are required.</p>
           </div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="process-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
         <div class="process-step" data-aos="fade-up">
           <div class="step-num">04</div>
           <div class="step-content">
-            <h4>Dyeing / Printing</h4>
-            <p>Jigger, continuous dyeing or rotary printing as required.</p>
+            <h4>Fabric Finishing</h4>
+            <p>Stentering, drying, softening and heat setting.</p>
           </div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="process-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
         <div class="process-step" data-aos="fade-up">
           <div class="step-num">05</div>
           <div class="step-content">
-            <h4>Washing & Soaping</h4>
-            <p>Thorough wash-off for clean, bright, residue-free fabric.</p>
+            <h4>Shrinkage Control</h4>
+            <p>Sanforizing for dimensional stability.</p>
           </div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="process-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
         <div class="process-step" data-aos="fade-up">
           <div class="step-num">06</div>
           <div class="step-content">
-            <h4>Stenter Finishing</h4>
-            <p>Width setting, drying, and application of finishing chemicals.</p>
-          </div>
-        </div>
-        <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-        <div class="process-step" data-aos="fade-up">
-          <div class="step-num">07</div>
-          <div class="step-content">
-            <h4>Sanforizing</h4>
-            <p>Final pre-shrinking for dimensional stability before dispatch.</p>
+            <h4>Inspection &amp; Packing</h4>
+            <p>Shade check, inspection, rolling and dispatch packing.</p>
           </div>
         </div>
       </div>
@@ -344,39 +422,39 @@
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <p class="section-eyebrow light">Why Choose Us</p>
-        <h2 class="section-title light">The <span class="accent">Shamim Advantage</span></h2>
+        <h2 class="section-title light">The Shamim advantage</h2>
         <p class="section-desc light">Why exporters and manufacturers trust us with their fabric.</p>
       </div>
       <div class="why-grid">
         <div class="why-card" data-aos="fade-up">
           <div class="why-icon"><i class="fa-solid fa-layer-group"></i></div>
-          <h3>All Under One Roof</h3>
-          <p>Complete dyeing and finishing process chain in a single facility eliminates logistics hassle and cuts lead times dramatically.</p>
+          <h3>All under one roof</h3>
+          <p>Full dyeing and finishing chain in one facility — less logistics, shorter lead times.</p>
         </div>
         <div class="why-card" data-aos="fade-up">
           <div class="why-icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h3>Export-Quality Standards</h3>
-          <p>Strict process controls and quality checkpoints ensure every meter of fabric meets international export requirements.</p>
+          <h3>Export-quality standards</h3>
+          <p>Process controls and checkpoints so every meter meets buyer requirements.</p>
         </div>
         <div class="why-card" data-aos="fade-up">
           <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Fast Turnaround</h3>
-          <p>High-capacity machinery and experienced team ensure quick processing without compromising on quality.</p>
+          <h3>Fast turnaround</h3>
+          <p>Capacity and an experienced team keep orders moving without cutting corners.</p>
         </div>
         <div class="why-card" data-aos="fade-up">
           <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
-          <h3>Reliable Partnership</h3>
-          <p>We build long-term relationships with exporters, garment manufacturers, and trading houses based on trust and consistency.</p>
+          <h3>Reliable partnership</h3>
+          <p>Three decades of relationships with exporters, garment makers and trading houses — since 1995.</p>
         </div>
         <div class="why-card" data-aos="fade-up">
           <div class="why-icon"><i class="fa-solid fa-gears"></i></div>
-          <h3>Modern Machinery</h3>
-          <p>Investment in modern, well-maintained equipment ensures high output, minimal downtime, and consistent shade reproducibility.</p>
+          <h3>Modern machinery</h3>
+          <p>Well-maintained equipment for output, uptime, and shade reproducibility.</p>
         </div>
         <div class="why-card" data-aos="fade-up">
           <div class="why-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-          <h3>Strategic Location</h3>
-          <p>Located on Manga-Raiwind Road, Manga Mandi — at the heart of Punjab's textile corridor, with easy access to Lahore and major export hubs.</p>
+          <h3>Strategic location</h3>
+          <p>Located on Manga-Raiwind Road — connected to Lahore and major export hubs.</p>
         </div>
       </div>
     </div>
@@ -384,15 +462,19 @@
 
   <!-- ===== CTA BANNER ===== -->
   <section class="cta-banner">
+    <div class="cta-media" aria-hidden="true">
+      <img src="images/cta-fabric.jpg" alt="" />
+      <div class="cta-overlay"></div>
+    </div>
     <div class="container cta-inner">
       <div class="cta-text" data-aos="fade-right">
-        <h2>Ready to Process Your Fabric?</h2>
-        <p>Send us your requirements and get a competitive quote within 24 hours.</p>
+        <h2>Need fabric dyed or finished?</h2>
+        <p>Share fabric type, shade and process needs — greige in, finished cloth out. We respond within 24 hours.</p>
       </div>
       <div class="cta-actions" data-aos="fade-left">
         <a href="#contact" class="btn btn-primary btn-lg">Request a Quote</a>
-        <a href="tel:+923001234567" class="btn btn-outline-light btn-lg">
-          <i class="fa-solid fa-phone"></i> Call Us Now
+        <a href="https://wa.me/923315444435?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20fabric%20processing." class="btn btn-outline-light btn-lg" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp 0331-5444435
         </a>
       </div>
     </div>
@@ -403,8 +485,8 @@
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <p class="section-eyebrow">Get In Touch</p>
-        <h2 class="section-title">Contact <span class="accent">Shamim Textile</span></h2>
-        <p class="section-desc">Reach out to us for bulk inquiries, pricing, and partnerships.</p>
+        <h2 class="section-title">Contact Shamim Textile</h2>
+        <p class="section-desc">Ask for fabric dyeing, finishing, printing or full grey-to-finish processing — WhatsApp is fastest.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info" data-aos="fade-right">
@@ -412,98 +494,112 @@
             <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <h4>Our Location</h4>
-              <p>4km, Manga-Raiwind Road,<br/>Punjab, Pakistan</p>
+              <p>4km, Manga-Raiwind Road,<br />Punjab, Pakistan</p>
             </div>
           </div>
           <div class="info-card">
             <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
             <div>
-              <h4>Phone / WhatsApp</h4>
-              <p>+92 300 000 0000<br/>+92 42 0000000</p>
+              <h4>Phone</h4>
+              <p>
+                <a href="tel:+923008449378">+92 300 8449378</a>
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>
+                <a href="https://wa.me/923315444435" target="_blank" rel="noopener noreferrer">0331-5444435</a><br />
+                <a href="https://wa.me/923315444435?text=Hello%2C%20I%20am%20interested%20in%20your%20dyeing%20and%20finishing%20services." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              </p>
             </div>
           </div>
           <div class="info-card">
             <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <h4>Email</h4>
-              <p>info@shamimtextilemills.com<br/>export@shamimtextilemills.com</p>
+              <p>
+                <a href="mailto:info@shamimtextilemills.com">info@shamimtextilemills.com</a><br />
+                <a href="mailto:export@shamimtextilemills.com">export@shamimtextilemills.com</a>
+              </p>
+              <p class="email-note">Ready when your domain &amp; mailbox go live.</p>
             </div>
           </div>
           <div class="info-card">
             <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
             <div>
               <h4>Working Hours</h4>
-              <p>Monday – Saturday<br/>8:00 AM – 6:00 PM (PKT)</p>
+              <p>Monday – Saturday<br />8:00 AM – 6:00 PM (PKT)</p>
             </div>
           </div>
-          <a href="https://wa.me/923000000000?text=Hello%2C%20I%20am%20interested%20in%20your%20dyeing%20and%20finishing%20services." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/923315444435?text=Hello%2C%20I%20am%20interested%20in%20your%20dyeing%20and%20finishing%20services." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
           </a>
         </div>
 
         <div class="contact-form-wrap" data-aos="fade-left">
           <form class="contact-form" id="contactForm" novalidate>
-            <h3>Send an Inquiry</h3>
+            <h3>Send an inquiry</h3>
+            <p class="form-lead">Opens WhatsApp with your message pre-filled so we can reply quickly.</p>
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
               </div>
               <div class="form-group">
-                <label for="company">Company / Organisation</label>
-                <input type="text" id="company" name="company" placeholder="Company Name" />
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company name" autocomplete="organization" />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com" required />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" autocomplete="email" />
               </div>
               <div class="form-group">
                 <label for="phone">Phone / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" placeholder="+92 300 0000000" />
+                <input type="tel" id="phone" name="phone" placeholder="03XX XXXXXXX" autocomplete="tel" />
               </div>
             </div>
             <div class="form-group">
-              <label for="service">Service Required</label>
+              <label for="service">Service required</label>
               <select id="service" name="service">
-                <option value="">-- Select a Service --</option>
-                <option>Stenters</option>
-                <option>Pressurized Jiggers</option>
-                <option>Normal Jiggers</option>
-                <option>Sanforizing</option>
-                <option>Washing</option>
-                <option>Continuous Bleaching</option>
-                <option>Rotary Printing</option>
-                <option>Singeing</option>
+                <option value="">-- Select a service --</option>
+                <option>Fabric Dyeing</option>
+                <option>Reactive Dyeing</option>
+                <option>Vat Dyeing</option>
+                <option>Disperse Dyeing (PC / Polyester)</option>
+                <option>Batch Dyeing</option>
                 <option>Continuous Dyeing</option>
-                <option>Mercerizing</option>
-                <option>Multiple / Full Processing</option>
+                <option>Washing &amp; Pretreatment</option>
+                <option>Bleaching</option>
+                <option>Pigment Printing</option>
+                <option>Rotary Printing</option>
+                <option>Fabric Finishing (Stentering / Softening)</option>
+                <option>Shrinkage Control (Sanforizing)</option>
+                <option>Full Processing (Grey to Finish)</option>
+                <option>Multiple Services</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Message / Requirements *</label>
-              <textarea id="message" name="message" rows="5" placeholder="Describe your fabric type, quantity, and processing requirements..." required></textarea>
+              <label for="message">Message / requirements *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Fabric type, quantity, shade, and processing needs..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full">
-              <i class="fa-solid fa-paper-plane"></i> Send Inquiry
+              <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
             </button>
             <p class="form-note">We typically respond within 24 hours.</p>
           </form>
-          <div class="form-success" id="formSuccess">
-            <i class="fa-solid fa-circle-check"></i>
-            <h3>Thank You!</h3>
-            <p>Your inquiry has been received. Our team will get back to you within 24 hours.</p>
-          </div>
         </div>
       </div>
 
-      <!-- Map Embed -->
       <div class="map-wrap" data-aos="fade-up">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407!2d74.173233!3d31.2561969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39185375b7282c27%3A0x30151972e21df888!2sShamim%20Textile%20Mills%20raiwind%20branch!5e0!3m2!1sen!2spk!4v1"
           width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" title="Shamim Textile Mills Raiwind Branch Location"></iframe>
+          referrerpolicy="no-referrer-when-downgrade" title="Shamim Textile Mills location on Manga-Raiwind Road"></iframe>
       </div>
     </div>
   </section>
@@ -513,15 +609,17 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <div class="logo">
-          <img src="logo.png" alt="Shamim Textile Mills Logo" class="logo-img" />
+          <img src="logo.png" alt="Shamim Textile Mills" class="logo-img" />
           <div class="logo-text">
             <span class="logo-main">Shamim Textile</span>
             <span class="logo-sub">Mills PVT LTD</span>
           </div>
         </div>
-        <p class="footer-tagline">Premier Dyeing & Finishing Specialists in Punjab, Pakistan. Delivering export-quality textile processing for global supply chains.</p>
+        <p class="footer-tagline">Dyeing and finishing textile unit since 1995 — converting greige woven fabric into coloured, processed, finished cloth for garment and home textile customers.</p>
         <div class="footer-socials">
-          <a href="https://wa.me/923000000000" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/923315444435" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:info@shamimtextilemills.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+923008449378" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
         </div>
       </div>
       <div class="footer-links">
@@ -529,8 +627,10 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
+          <li><a href="#vision">Vision</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#facility">Facility</a></li>
+          <li><a href="#capabilities">Process</a></li>
           <li><a href="#why-us">Why Choose Us</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -538,39 +638,36 @@
       <div class="footer-services">
         <h4>Our Services</h4>
         <ul>
-          <li>Stenters</li>
-          <li>Pressurized Jiggers</li>
-          <li>Normal Jiggers</li>
+          <li>Fabric Dyeing</li>
+          <li>Reactive / Vat / Disperse</li>
+          <li>Batch &amp; Continuous Dyeing</li>
+          <li>Washing &amp; Pretreatment</li>
+          <li>Pigment &amp; Rotary Printing</li>
+          <li>Stentering &amp; Softening</li>
           <li>Sanforizing</li>
-          <li>Washing</li>
-          <li>Continuous Bleaching</li>
-          <li>Rotary Printing</li>
-          <li>Singeing</li>
-          <li>Continuous Dyeing</li>
-          <li>Mercerizing</li>
+          <li>Full Grey-to-Finish</li>
         </ul>
       </div>
       <div class="footer-contact">
         <h4>Contact Info</h4>
         <p><i class="fa-solid fa-location-dot"></i> 4km, Manga-Raiwind Road, Punjab, Pakistan</p>
-        <p><i class="fa-solid fa-phone"></i> +92 300 000 0000</p>
-        <p><i class="fa-solid fa-envelope"></i> info@shamimtextilemills.com</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+923008449378">+92 300 8449378</a></p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/923315444435">0331-5444435</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@shamimtextilemills.com">info@shamimtextilemills.com</a></p>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; 2026 Shamim Textile Mills PVT LTD. All Rights Reserved.</p>
-        <p>Designed for Excellence | 4km, Manga-Raiwind Road, Punjab, Pakistan</p>
+        <p>4km, Manga-Raiwind Road, Punjab, Pakistan</p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/923000000000?text=Hello%2C%20I%20am%20interested%20in%20your%20dyeing%20and%20finishing%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/923315444435?text=Hello%2C%20I%20am%20interested%20in%20your%20dyeing%20and%20finishing%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i class="fa-solid fa-chevron-up"></i>
   </button>

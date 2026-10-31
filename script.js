@@ -1,53 +1,56 @@
 /* =============================================
    SHAMIM TEXTILE MILLS PVT LTD
-   JavaScript - Interactions & Animations
    ============================================= */
 
 (function () {
   'use strict';
 
+  var WHATSAPP_NUMBER = '923315444435';
+
   /* ---- Navbar scroll effect ---- */
-  const navbar = document.getElementById('navbar');
+  var navbar = document.getElementById('navbar');
   function onScroll() {
-    if (window.scrollY > 60) {
+    if (window.scrollY > 40) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
     toggleBackToTop();
+    updateActiveNavLink();
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 
   /* ---- Mobile hamburger menu ---- */
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
 
   hamburger.addEventListener('click', function () {
-    const isOpen = navLinks.classList.toggle('open');
+    var isOpen = navLinks.classList.toggle('open');
     hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close menu on nav link click
   navLinks.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       navLinks.classList.remove('open');
       hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     });
   });
 
-  // Close menu on outside click
   document.addEventListener('click', function (e) {
     if (navLinks.classList.contains('open') && !navbar.contains(e.target)) {
       navLinks.classList.remove('open');
       hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
   });
 
-  /* ---- Back to top button ---- */
-  const backToTop = document.getElementById('backToTop');
+  /* ---- Back to top ---- */
+  var backToTop = document.getElementById('backToTop');
   function toggleBackToTop() {
     if (window.scrollY > 400) {
       backToTop.classList.add('show');
@@ -59,37 +62,17 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  /* ---- Hero floating particles ---- */
-  function createParticles() {
-    const container = document.getElementById('particles');
-    if (!container) return;
-    const count = 18;
-    for (let i = 0; i < count; i++) {
-      const p = document.createElement('div');
-      p.classList.add('particle');
-      const size = Math.random() * 60 + 10;
-      const left = Math.random() * 100;
-      const duration = Math.random() * 20 + 15;
-      const delay = Math.random() * 20;
-      p.style.cssText = `
-        width: ${size}px;
-        height: ${size}px;
-        left: ${left}%;
-        animation-duration: ${duration}s;
-        animation-delay: -${delay}s;
-      `;
-      container.appendChild(p);
-    }
-  }
-  createParticles();
-
-  /* ---- Scroll-reveal (AOS-lite) ---- */
+  /* ---- Scroll-reveal ---- */
   function initAOS() {
-    const elements = document.querySelectorAll('[data-aos]');
-    const observer = new IntersectionObserver(function (entries) {
+    var elements = document.querySelectorAll('[data-aos]');
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(function (el) { el.classList.add('aos-animate'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          const delay = parseInt(entry.target.dataset.delay || 0, 10);
+          var delay = parseInt(entry.target.dataset.delay || 0, 10);
           setTimeout(function () {
             entry.target.classList.add('aos-animate');
           }, delay);
@@ -98,54 +81,56 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-    elements.forEach(function (el) {
-      observer.observe(el);
-    });
+    elements.forEach(function (el) { observer.observe(el); });
   }
 
-  /* ---- Service cards staggered delay ---- */
   function staggerCards() {
-    const cards = document.querySelectorAll('.service-card, .why-card');
-    cards.forEach(function (card, index) {
+    document.querySelectorAll('.service-card, .why-card').forEach(function (card, index) {
       if (!card.dataset.delay) {
-        card.dataset.delay = (index % 3) * 120;
+        card.dataset.delay = String((index % 3) * 100);
       }
     });
   }
-  staggerCards();
 
-  /* ---- Contact Form handling ---- */
-  const contactForm = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
+  /* ---- Contact form → WhatsApp ---- */
+  var contactForm = document.getElementById('contactForm');
 
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Basic validation
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+      var name = document.getElementById('name').value.trim();
+      var company = document.getElementById('company').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+      var service = document.getElementById('service').value.trim();
+      var message = document.getElementById('message').value.trim();
 
-      if (!name || !email || !message) {
-        showFormError('Please fill in all required fields.');
+      if (!name || !message) {
+        showFormError('Please enter your name and message.');
         return;
       }
 
-      if (!isValidEmail(email)) {
+      if (email && !isValidEmail(email)) {
         showFormError('Please enter a valid email address.');
         return;
       }
 
-      // Simulate form submission
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      var lines = [
+        'Hello Shamim Textile Mills,',
+        '',
+        'I would like to inquire about your dyeing & finishing services.',
+        '',
+        'Name: ' + name
+      ];
+      if (company) lines.push('Company: ' + company);
+      if (email) lines.push('Email: ' + email);
+      if (phone) lines.push('Phone: ' + phone);
+      if (service) lines.push('Service: ' + service);
+      lines.push('', 'Requirements:', message);
 
-      setTimeout(function () {
-        contactForm.style.display = 'none';
-        formSuccess.classList.add('show');
-      }, 1200);
+      var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener,noreferrer');
     });
   }
 
@@ -154,92 +139,89 @@
   }
 
   function showFormError(msg) {
-    // Remove existing error
-    const existing = contactForm.querySelector('.form-error-msg');
+    var existing = contactForm.querySelector('.form-error-msg');
     if (existing) existing.remove();
 
-    const err = document.createElement('p');
+    var err = document.createElement('p');
     err.className = 'form-error-msg';
-    err.style.cssText = 'color:#ef4444; font-size:0.85rem; margin-bottom:12px; font-weight:500;';
+    err.style.cssText = 'color:#c0392b;font-size:0.85rem;margin-bottom:12px;font-weight:600;';
     err.textContent = msg;
     contactForm.querySelector('button[type="submit"]').before(err);
-
     setTimeout(function () { err.remove(); }, 4000);
   }
 
-  /* ---- Smooth active nav link on scroll ---- */
+  /* ---- Active nav on scroll ---- */
   function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollPos = window.scrollY + 100;
+    var sections = document.querySelectorAll('section[id]');
+    var scrollPos = window.scrollY + 140;
+    var current = '';
 
     sections.forEach(function (section) {
-      const top = section.offsetTop;
-      const bottom = top + section.offsetHeight;
-      const id = section.getAttribute('id');
-      const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-      if (link) {
-        if (scrollPos >= top && scrollPos < bottom) {
-          document.querySelectorAll('.nav-links a').forEach(function (a) {
-            a.style.color = '';
-          });
-          link.style.color = 'var(--accent)';
-        }
+      var top = section.offsetTop;
+      var bottom = top + section.offsetHeight;
+      if (scrollPos >= top && scrollPos < bottom) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      a.classList.remove('active');
+      if (current && a.getAttribute('href') === '#' + current) {
+        a.classList.add('active');
       }
     });
   }
-  window.addEventListener('scroll', updateActiveNavLink, { passive: true });
 
-  /* ---- Counter animation for hero stats ---- */
-  function animateCounter(el, target, duration) {
-    const isText = isNaN(parseInt(target));
-    if (isText) return; // skip non-numeric like "Export"
+  /* ---- Gallery video: inline only, no fullscreen / native player ---- */
+  function lockGalleryVideo() {
+    var video = document.getElementById('printingVideo');
+    if (!video) return;
 
-    let start = 0;
-    const end = parseInt(target);
-    if (end === 0) return;
-
-    const increment = end / (duration / 16);
-    const suffix = target.includes('+') ? '+' : (target.includes('%') ? '%' : '');
-
-    function step() {
-      start += increment;
-      if (start >= end) {
-        el.textContent = end + suffix;
-        return;
-      }
-      el.textContent = Math.floor(start) + suffix;
-      requestAnimationFrame(step);
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.controls = false;
+    video.disablePictureInPicture = true;
+    if (video.disableRemotePlayback !== undefined) {
+      video.disableRemotePlayback = true;
     }
-    requestAnimationFrame(step);
-  }
 
-  function initCounters() {
-    const counters = document.querySelectorAll('.stat-num');
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const val = el.textContent.trim();
-          animateCounter(el, val, 1500);
-          observer.unobserve(el);
+    function blockFullscreen(e) {
+      e.preventDefault();
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(function () {});
+      }
+      if (document.webkitFullscreenElement && document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+
+    ['fullscreenchange', 'webkitfullscreenchange'].forEach(function (evt) {
+      document.addEventListener(evt, function () {
+        if (document.fullscreenElement === video || document.webkitFullscreenElement === video) {
+          blockFullscreen({ preventDefault: function () {} });
         }
       });
-    }, { threshold: 0.5 });
+    });
 
-    counters.forEach(function (c) { observer.observe(c); });
+    video.addEventListener('loadeddata', function () {
+      var playPromise = video.play();
+      if (playPromise && playPromise.catch) {
+        playPromise.catch(function () {});
+      }
+    });
   }
 
-  /* ---- Init all on DOM ready ---- */
+  /* ---- Init ---- */
+  function init() {
+    staggerCards();
+    initAOS();
+    lockGalleryVideo();
+    onScroll();
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
-
-  function init() {
-    initAOS();
-    initCounters();
-    onScroll(); // run once to set initial state
-  }
-
 })();
